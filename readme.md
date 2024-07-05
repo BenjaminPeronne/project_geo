@@ -4,6 +4,11 @@ Prénom : <em>Aymerick</em>
 
 Nom : <em>LAURETTA-PERONNE</em>
 
+Email : <em>aymerick-971@hotmail.fr</em>
+
+Mobile : <em>0690.24.96.89</em>
+
+
 ----
 
 # Project Geo
