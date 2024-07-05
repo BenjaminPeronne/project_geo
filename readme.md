@@ -24,7 +24,7 @@ Project Geo est une application web permettant de visualiser la géolocalisation
 1. Clonez le dépôt du projet :
 
     ```bash
-    git clone https://github.com/votre-nom-utilisateur/project_geo.git
+    git clone https://github.com/BenjaminPeronne/project_geo.git
     cd project_geo
     ```
 
