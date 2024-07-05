@@ -1,11 +1,17 @@
 from rest_framework import viewsets
-from .models import Student, University
-from .serializers import StudentSerializer, UniversitySerializer
+from .models import Etudiant, Universite
+from .serializers import EtudiantSerializer, UniversiteSerializer
+from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-class UniversityViewSet(viewsets.ModelViewSet):
-    queryset = University.objects.all()
-    serializer_class = UniversitySerializer
+class UniversiteViewSet(viewsets.ModelViewSet):
+    queryset = Universite.objects.all()
+    serializer_class = UniversiteSerializer
 
-class StudentViewSet(viewsets.ModelViewSet):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+class EtudiantViewSet(viewsets.ModelViewSet):
+    queryset = Etudiant.objects.all()
+    serializer_class = EtudiantSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+def map_view(request):
+    return render(request, 'geolocation/map.html')

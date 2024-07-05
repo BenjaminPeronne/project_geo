@@ -1,12 +1,14 @@
 from rest_framework import serializers
-from .models import Student, University
+from .models import Etudiant, Universite
 
-class UniversitySerializer(serializers.ModelSerializer):
+class UniversiteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = University
+        model = Universite
         fields = '__all__'
 
-class StudentSerializer(serializers.ModelSerializer):
+class EtudiantSerializer(serializers.ModelSerializer):
+    universite = UniversiteSerializer(read_only=True)
+
     class Meta:
-        model = Student
+        model = Etudiant
         fields = '__all__'
